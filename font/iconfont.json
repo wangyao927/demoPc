@@ -1,0 +1,16 @@
+{
+  "id": "3549645",
+  "name": "no name",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "29578211",
+      "name": "棉花糖",
+      "font_class": "mianhuatang",
+      "unicode": "e6c8",
+      "unicode_decimal": 59080
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 1、引入重置样式表   2、引入自定义样式表 -->
+    <link rel="stylesheet" href="header.css">
+</head>
+<body>
+    <!-- 头部 -->
+    <!-- 用clearfix给父元素清浮动，解决子元素浮动导致父元素高度消失问题 -->
+    <div class="header bx-col clearfix">
+        <!-- logo -->
+        <h1 class="logo"></h1>
+        <!-- nav 导航-->
+        <ul class="nav clearfix">
+            <li><a href="#">导航1</a></li>
+            <li><a href="#">导航2</a></li>
+            <li><a href="#">导航3</a></li>
+            <li><a href="#">导航4</a></li>
+        </ul>
+        <!-- user-center -->
+        <ul class="user-center clearfix">
+            <li><a href="#">登录</a></li>
+            <li><a href="#">注册</a></li>
+        </ul>
+        <!-- cart 购物车-->
+        <div class="cart">
+            <span class="cart-shopping">购物车</span>
+            <!-- 鼠标移上下拉框 -->
+            <div class="layer"></div>
+        </div>
+    </div>
+
+    <!-- 轮播图 -->
+    <div class="bx-col swiper"></div>
+
+    <!-- 内容模块 -->
+    <div class="bx-col intrBox"></div>
+
+    <!-- 底部 -->
+    <!-- 达到全屏效果再加一个外套 -->
+    <div class="footer-wrap">
+        <div class="bx-col footer"></div>
+    </div>
+</body>
+</html>

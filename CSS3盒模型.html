@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+  <!-- meat:vp tab  视口（可视区域窗口大小）
+      width=device-width  屏幕宽度 = 设备高度 
+      只要是做手机移动端页面就必须加上这段代码-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    html{
+      font-size: 100px;
+      /* CSS3弹性盒模型 子元素排列方式默认就是 水平排列
+      flex 弹性盒模型--兼容写法 */
+    }
+    .item{
+      display: -webkit-box;      /* 旧版本写法*/
+      display: -webkit-flex;     /* -webkit内核浏览器*/
+      display: -ms-flexbox;      /* 过度版本写法*/
+      display: flex;             /* 新版本写法 */
+      padding:  0 .1rem;         /* 上下0 左右 10px */
+      margin-left: -.1rem;       /* 反向移动  左边居左 */
+    }
+    .item-link{
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+
+      width: 50%;
+      height: 3rem;
+      margin-left: 0.1rem;
+      background: pink;
+      display: block;
+      margin-bottom: .3rem;
+    }
+    .sec-item{
+      display: -webkit-box;      /* 旧版本写法*/
+      display: -webkit-flex;     /* -webkit内核浏览器*/
+      display: -ms-flexbox;      /* 过度版本写法*/
+      display: flex;             /* 新版本写法 */
+      padding: 0 .1rem;
+    }
+    .sec-txt{
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+    }
+    .sec-item h2{
+      font-size: .34rem;
+      font-weight: normal;
+    }
+    /* 图片 */
+    .sec-img{
+      width: 2rem;
+      height: 1.34rem;
+    }
+    .sec-img img{
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <!-- pc端：div   移动端：section  CSS3布局思想 flex 弹性盒模型（抛弃用了浮动和定位替代）-->
+  <!-- 左边 -->
+  <section class="item">
+  <a href="#" class="item-link">
+    <!-- 图片 -->
+    <div class="img"></div>
+    <!-- 文字 -->
+    <div class="info">  </div>
+  </a>
+
+    <!-- 右边 -->
+    <a href="#" class="item-link">
+      <!-- 图片 -->
+      <div class="img"></div>
+      <!-- 文字 -->
+      <div class="info">  </div>
+    </a>
+  </section>
+
+  <!-- 左文右图 -->
+  <section class="sec-item">
+    <!-- 左文 -->
+    <div class="sec-txt">
+      <h2>
+        钦州科普日历丨全国低碳日：落实双碳行动，共建美丽家园
+      </h2>
+      <span class="icon"></span>
+    </div>
+    <!-- 右图 -->
+    <div class="sec-img">
+      <img src="https://t12.baidu.com/it/u=11140230,179416871&fm=30&app=106&f=JPEG?w=312&h=208&s=B762C9A65322A0FE5E7CEC180300A0C1" alt="">
+    </div>
+  </section>
+
+    <script>
+      (function (doc, win) {
+	var docEl = doc.documentElement, //文档根标签
+	    resizeEvent = 'orientationchange' in window ? 'orientationchang' : 'resize'; //viewport变化事件源
+	var rescale = function () {
+	    win.clientWidth = docEl.clientWidth;
+	    if (!win.clientWidth) return;
+	    // (屏幕宽度/设计图宽度) = 缩放或扩大的比例值;
+	    docEl.style.fontSize = 36 * (win.clientWidth / 375) + 'px';
+	}
+	if (!doc.addEventListener) return;
+	win.addEventListener(resizeEvent, rescale, false);
+	doc.addEventListener('DOMContentLoaded', rescale, false);
+})(document, window);
+  </script>
+</body>
+</html>

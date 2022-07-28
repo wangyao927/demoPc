@@ -1,0 +1,127 @@
+/* logo */
+.ifeng-hd{
+  /* width: 100%;    可以省略，默认就是100% */
+  height: 0.6rem;
+  background-color: gold;
+  /* 解决子元素有margin-top时，父子元素非但未分开反而父元素下掉情况 */
+  overflow: hidden;
+}
+.ifeng-hd img{
+  width: 1.95rem;
+  height: .37rem;
+   /* 设置居中对齐，若文本未转换成块级元素就给父元素加文本居中
+  若转换了就给文本设置块级居中margin： 0 auto；（上下无间距情况，有间距自行设置） */
+  display: block;
+  margin: 0.12rem auto;
+}
+
+/* nav */
+.ifeng-nav{
+  /* position: relative; */
+  height: .4rem;
+  /* 行内元素可以设置行高 */
+  line-height: .4rem;
+  background-color: palegoldenrod;
+  /* 必须用在父元素上，控制子元素排列方式，默认水平 ，浮动失效*/
+  display: -webkit-box;  
+  display: -webkit-flex;    
+  display: -ms-flexbox;  
+  display: flex;
+}
+.ifeng-nav a{
+  /* 定义子项目分配剩余空间,用flex来表示占多少份 ，为1是自动计算每等份大小（可手动计算 eg：五份为20%）*/
+  /* -webkit-box-flex: 1;  
+  -webkit-flex: 1;    
+  -ms-flex: 1;  
+   flex: 1; */
+   /* 对于字数不一样的情况不用平均分配，用左右相等的内填充 */
+   padding: 0 .17rem;
+   text-align: center;
+   color: #727272;
+   font-size: .15rem;
+}
+.ifeng-nav .current{
+  color: red;
+}
+.swiper-slide{
+  position: relative;
+}
+/* 图片过大时给图片设置宽度  */
+.swiper-slide img{
+  width: 100%;
+  /* height: 100%; */
+}
+.swiper-slide span{
+  color: red;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 3px solid #73AD21;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(0deg,rgba(0,0,0,0.8),rgba(0,0,0,0.8),rgba(0,0,0,-0.04));
+}
+/* 覆盖默认样式 */
+.swiper-pagination{
+  text-align: right;
+  font-size: .13rem;
+  color: #004175;
+}
+/* 设置分页器分子 */
+.swiper-pagination-current{
+  font-size: .18rem;
+  color: red;
+}
+
+/* 左图右文 */
+.ifeng-sec{
+  /* 弹性盒模型,让子元素水平展示 */
+  display: -webkit-box;  
+  display: -webkit-flex;    
+  display: -ms-flexbox;  
+  display: flex;
+  border-bottom: 1px solid red;
+  padding: .08rem .1rem;
+  background-color: palegoldenrod;
+}
+.ifeng-sec .pic{
+  width: 1.82rem;
+  height: 1.3rem;
+  margin: 0 .32rem 0 0;
+  padding: 0;
+}
+.ifeng-sec .pic img{
+  width: 100%;
+  height: 100%;
+}
+.ifeng-sec .txt{
+  /* 自适应除图片外的剩下部分 100% - 1.82rem = 剩下大小 */
+  -webkit-box-flex: 1;  
+      -webkit-flex: 1;    
+      -ms-flex: 1;  
+  flex: 1;
+  /* 让时间和图片底部对齐 */
+  /* 1、控制子元素排列 */
+  display: -webkit-box;
+  /* 2、控制排列方向（垂直），默认水平   */
+  -webkit-box-orient: vertical;
+  /* 控制对齐方式（两端） */
+  -webkit-box-pack: justify;
+}
+.ifeng-sec .txt h2{
+    /* 1、控制子元素排列 */
+    display: -webkit-box;
+    /* 2、控制排列方向（垂直），默认水平   */
+    -webkit-box-orient: vertical;
+    /* 3、控制出现省略号的行数 */
+    -webkit-line-clamp: 2;
+    /* 隐藏超出部分 */
+    overflow: hidden;
+}
+.ifeng-sec .txt p{
+  /* 1、控制子元素排列 */
+  display: flex;
+  /* 控制水平两端对齐 */
+  justify-content: space-between;
+}

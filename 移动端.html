@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 为了方便计算通常覆盖掉原html大小，通常手动设置为100px  */
+    html{
+      font-size: 100px;
+    }
+    .box{
+      width: 3rem;                          /* 相当于300px */
+      height: 3rem;
+      background-color: royalblue;
+    }
+  </style>
+</head>
+<body>
+  <!-- pc端换移动端：检查 -> 左上角 -> 刷新换机型-->
+  <!-- rem 参照单位（根元素） html    （只用在手机移动端，用于适配机型，动态获取屏幕大小）-->
+  <div class="box"></div>
+  <!-- JS函数封装：达到动态获取屏幕尺寸，rem动态获取 1rem = 100px -->
+
+   <!-- 不可用！！！！！！！！！！ -->
+  <!-- <script type="text/javascript">
+    function refreshRem() {
+      var desW = 750,
+          winW = document.documentElement.clientWidth,
+          ratio = winW / desW;
+      document.documentElement.fontSize = ratio * 100 + 'px';
+    }
+    refreshRem();
+    window.addEventListener('resize',refreshRem);
+  </script> -->
+  <script type="text/javascript">
+    function refreshRem(){
+    var desw =750,
+    winw=document.documentElement.clientwidth, ratio =winw / desW;
+    document.documentElement.style.fontsize=ratio *100 +'px'
+    }
+    refreshRem();
+    window.addEventListener(resizerefreshRem);</script>
+    
+</body>
+</html>

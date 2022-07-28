@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .parents{
+    /* 相对定位 */
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: cadetblue;
+  }
+  .child{
+    width: 200px;
+    height: 200px;
+    background: pink;
+    /* 方法一 */
+    /* 绝对定位 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* 反向移动 */
+    margin-top: -100px;
+    margin-left: -100px;
+
+    /* 方法二:位移 */
+    /* transform: translate(-50% -50%); */
+
+    /* 方法三 */
+    /* top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto; */
+
+  }
+  </style>
+</head>
+<body>
+<!-- 让child居中的几种写法(定位)-->
+
+  <!--定位
+    方法一:(css盒子模型)
+          top bottom / left right
+          先设50% 再反向移动 -高度/2  -宽度/2
+  
+    方法二:(css3 变换 - 位移)
+          方位 50%  -高度/2  -宽度/2 
+          transform: translate(-50% -50%)
+        
+    方法三:(主要在移动端)
+          四个方位为0且外边距margin:auto-->
+
+  <div class="parents"> 
+    <div class="child"></div>
+  </div>
+</body>
+</html>

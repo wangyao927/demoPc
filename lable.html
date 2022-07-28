@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 失去焦点 */
+    input{
+      border: 1px solid #ccc;
+    }
+    /* ：focus 伪类选择器，获取焦点 */
+    input:focus{
+      /* 清空外框线 */
+      outline: 0;
+      border: 1px solid red;
+    }
+  </style>
+</head>
+<body>
+  <!-- 选框 点击文字也能选中/取消 -->
+  <!-- lable标签(在label元素内点击文本，就会触发此控件,自动将焦点转到和标签相关的表单控件上)   for属性(指向目标选框id) -->
+  <input type="checkbox" id="read">
+  <label for="read">阅读并接受</label>
+  <a href="#" target="_blank">《百度用户手册》</a>及<a href="#" target="_blank">《百度隐私权保护手册》</a>
+
+  <!-- placeholder占位符  写提示文字 -->
+  <input type="text" placeholder="请输入用户名">
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新闻H5首页</title>
+  <!-- 1、引入重置样式表 -->
+  <link rel="stylesheet" href="css/reset.min.css">
+  <!-- 轮播图先引入css -->
+  <link rel="stylesheet" href="swiper-bundle.min.css">
+  <!-- 2、引入自定义样式表 -->
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="font/iconfont.css">
+</head>
+<body>
+  <header class="ifeng-hd">
+    <a href="#">
+      <img src="logo.jpg" alt="">
+    </a>
+  </header>
+
+  <nav class="ifeng-nav">
+    <!-- class="current/active" 为优先展示当前 -->
+    <a href="#" class="current">头条</a>
+    <a href="#">视频</a>
+    <a href="#">财经</a>
+    <a href="#">凤凰号</a>
+    <a href="#">凤凰卫视</a>
+  </nav>
+
+  <div class="swiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="pic.jpeg" alt="">
+          <span>有时候我们制作HTML页面需要把文字放在图片上面，让网页看起来更好看，但是初学网页设计的小伙伴还不知道HTML中怎样让文字在图片的上面，今天小编我就来分享一下方法。</span>
+        </div>
+        <div class="swiper-slide">
+          <img src="pic1.jpeg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="pic2.jpeg" alt="">
+        </div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+    
+    <!-- 如果需要导航按钮 -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    
+    <!-- 如果需要滚动条 -->
+    <div class="swiper-scrollbar"></div>
+</div>
+
+<!-- 主体模块 -->
+<!-- 一、左图右文 -->
+<section class="ifeng-sec">
+  <!-- 左图 -->
+  <figure class="pic"><img src="pic111.webp" alt=""></figure>
+  <!-- 右文 -->
+  <aside class="txt">
+    <h2>不演了！外媒密集炒作“中国将出动战机阻止佩洛西降落台北”日前外媒传出美国众议院议长佩洛西</h2>
+    <p>
+      <span class="time">1分钟</span>
+      <span class="num">
+        10000 
+        <span class="iconfont icon-mianhuatang"></span>
+      </span>
+
+    </p>
+  </aside>
+</section>
+<section class="ifeng-sec">
+  <!-- 左图 -->
+  <figure class="pic"><img src="pic111.webp" alt=""></figure>
+  <!-- 右文 -->
+  <aside class="txt">
+    <h2>不演了！外媒密集炒作“中国将出动战机阻止佩洛西降落台北”日前外媒传出美国众议院议长佩洛西</h2>
+    <p>
+      <span class="time">1分钟</span>
+      <span class="num">
+        10000 
+        <span class="iconfont icon-mianhuatang"></span>
+      </span>
+
+    </p>
+  </aside>
+</section>
+<section class="ifeng-sec">
+  <!-- 左图 -->
+  <figure class="pic"><img src="pic111.webp" alt=""></figure>
+  <!-- 右文 -->
+  <aside class="txt">
+    <h2>不演了！外媒密集炒作“中国将出动战机阻止佩洛西降落台北”日前外媒传出美国众议院议长佩洛西</h2>
+    <p>
+      <span class="time">1分钟</span>
+      <span class="num">
+        10000 
+        <span class="iconfont icon-mianhuatang"></span>
+      </span>
+
+    </p>
+  </aside>
+</section>
+<section class="ifeng-sec">
+  <!-- 左图 -->
+  <figure class="pic"><img src="pic111.webp" alt=""></figure>
+  <!-- 右文 -->
+  <aside class="txt">
+    <h2>不演了！外媒密集炒作“中国将出动战机阻止佩洛西降落台北”日前外媒传出美国众议院议长佩洛西</h2>
+    <p>
+      <span class="time">1分钟</span>
+      <span class="num">
+        10000 
+        <span class="iconfont icon-mianhuatang"></span>
+      </span>
+
+    </p>
+  </aside>
+</section>
+  <!-- 动态计算移动根元素字体大小 -->
+  <script>
+    (function (doc, win) {
+var docEl = doc.documentElement, //文档根标签
+    resizeEvent = 'orientationchange' in window ? 'orientationchang' : 'resize'; //viewport变化事件源
+var rescale = function () {
+    win.clientWidth = docEl.clientWidth;
+    if (!win.clientWidth) return;
+    // (屏幕宽度/设计图宽度) = 缩放或扩大的比例值;
+    docEl.style.fontSize = 100 * (win.clientWidth / 375) + 'px';
+}
+if (!doc.addEventListener) return;
+win.addEventListener(resizeEvent, rescale, false);
+doc.addEventListener('DOMContentLoaded', rescale, false);
+})(document, window);
+</script>
+<!-- 轮播图引入js -->
+<script src="swiper-bundle.min.js"></script>
+<!-- 初始化swiper -->
+<script>        
+  var mySwiper = new Swiper ('.swiper', {
+    // 自动切换
+    autoplay: {
+    delay: 3000,                     //自动切换时间
+    // stopOnLastSlide: false,          //是否停在最后一页
+    disableOnInteraction: false,      //手动切换后是否停止切换
+    },
+    // direction: 'vertical', // 垂直切换选项
+    loop: true, // 循环模式选项
+    
+    // 如果需要分页器
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'fraction',
+    },
+    
+    // 如果需要前进后退按钮
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    
+    // 如果需要滚动条
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  })        
+  </script>
+</body>
+</html>

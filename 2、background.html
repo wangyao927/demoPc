@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html{
+      width: 100%;
+      height: 100%;
+    }
+    body{
+      width: 100%;
+      height: 100%;
+      background: url(https://ossweb-img.qq.com/upload/adw/image/977/20220714/33242b6f0237f6dca6a652a37bce1557.jpeg) no-repeat center;
+      /* 背景铺满,不受缩放影响 */
+      background-size: cover;
+      /* 溢出隐藏,解决有默认间距导致出现滚动条 */
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <!-- 方法一:全屏背景 (直接加在body,且weight:100%) 
+        背景颜色：background-color                    / background:red
+        背景图片：background-image：url ( )           / background:url( )
+        背景是否平铺：background-repart：no-repeat;   (repeat-x/y 是x/y 轴重复）(若背景>图标，则默认平铺)
+        背景位置：background-position：x y；
+        背景固定: background-attchment:fixed         (有滚动条背景不动)
+      以上可缩写
+    
+      css3 新增的背景属性类(不可以缩写)
+        背景尺寸:background-size: 1px / cover (铺满覆盖,宽高同时缩放至容器边缘为止,会出现缩放图片被裁减情况) / (宽/高任一碰到边缘即可等比例缩放,会出现留白) 
+        背景裁剪：background-clip：text （以文字裁剪）
+        背景显示原点：background-origin：border-box;    以边框线显示背景图片（包括边框线）
+                                        content-box；  以内容部分显示背景图片
+                                        padding-box；  以内填充显示背景图片
+        以上不可缩写--->
+
+</body>
+</html>

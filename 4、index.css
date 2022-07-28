@@ -1,0 +1,10 @@
+/* 通配符选择器 清空样式 */
+*{
+  margin: 0;
+  padding: 0;
+}
+/* 设置图片100%填充 */
+.swiper img{
+  width: 100%;
+}
+/* 用样式覆盖swiper.min.css */

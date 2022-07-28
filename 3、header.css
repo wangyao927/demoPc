@@ -1,0 +1,85 @@
+/* 板心代码，让页面内容始终水平居中 margin间距*/
+.bx-col{
+  width: 1200px;
+  margin: 0 auto;
+}
+.header{
+  /* 文字高度=行高就是垂直居中状态 */
+  height: 83px;
+  line-height: 83px;
+  background-color: pink
+  ;
+}
+/* 利用分组选择器优化代码 */
+/* 或用display： inline-block 解决行内非替换元素的宽高问题，之后内联对象会被排列在同一行内*/
+/* .logo,.nav,.cart,.user-center{
+  float: left;
+} */
+
+.logo{
+  float: left;
+  width: 176px;
+  height: 52px;
+  margin-top: 16px;
+  background-color: red;
+}
+.nav{
+  float: left;
+}
+.nav li{
+  float: left;
+  /* 间距上下为0，左右为30px */
+  padding: 0px 30px;
+}
+.cart{
+  position: relative;
+  float: right;
+  padding-right:39px;
+}
+/* 下拉层 */
+.layer{
+  /* 隐藏 */
+  display: none;
+  /* 绝对定位，取消占位 */
+  position: absolute;
+  top: 80px;
+  left: -130px;
+  width: 349px;
+  height: 411px;
+  background: #fff;
+  /* 阴影效果 */
+  box-shadow: 0px 2px 6px 0px;
+}
+/* 鼠标移上，显示隐藏下拉框 */
+/* 后代选择器 layer层嵌套在cart中 */
+.cart:hover .layer{
+  display: block;          /* 显示出来 */
+}
+.cart:hover .cart-shopping{
+  color: red;
+}
+.user-center{
+  float: right;
+}
+.user-center li{
+  float: left;
+  padding-right:30px;
+}
+
+/* 轮播图 */
+.swiper{
+  height: 361px;
+  background-color: gold;
+}
+.intrBox{
+  height: 184px;
+  background-color: green;
+}
+.footer-wrap{
+  width: 100%;
+  background-color: black;
+}
+.footer{
+  height: 272px;
+  background-color: gray;
+}

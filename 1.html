@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* p{
+      background-color: pink;
+    } */
+    .name{
+      background-color: goldenrod;
+    }
+    .name1{
+      color: red;
+    }
+  /* 后代选择器：作用于两层ul */
+    div ul {
+      background-color: aqua;
+    }
+  /* 子代选择器：作用于第一层ul */
+    div>ul {
+      background-color: pink;
+    }
+    /* 分组选择器,简化代码 */
+    /* p{background: url(sprites.png) no-repeat center 0 0};
+    span{background: url(sprites.png) no-repeat center -300px 0}; */
+    p,span{
+      background-image:url(sprites.png);
+      background-repeat: no-repeat;
+    }
+    p{background-position: 0 0;}
+    span{background-position: -300px 0;}
+
+    
+  /* a的四种状态 */
+  /* 访问前 没有链接地址 #*/
+  a:link{
+    color: gold;
+  }
+  /* 访问后 有链接地址*/
+  a:visited{
+    color: gray;
+  }
+  /* 鼠标移上 */
+  a:hover{
+    color: blue;
+  }
+  /* 鼠标按下 */
+  a:active{
+    color: blueviolet;
+  }
+  </style>
+</head>
+<body>
+  <p class="name">王瑶</p>
+  <!-- 类名name的复用 -->
+  <p class="name name1">王瑶</p>
+
+  <div class="main">
+    <div class="left"></div>
+    <div class="right"></div>
+  </div>
+
+<!-- 多级导航菜单（嵌套结构） -->
+  <div>
+    <ul>
+      <li>
+        <ul>
+          <li></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+ 
+  <!-- 并列结构 -->
+  <div></div>
+  <ul></ul>
+  <ul></ul>
+
+  <!-- 分组选择器 -->
+  <p></p>
+  <span></span>
+
+
+  <!-- a的四种状态 -->
+  <!-- target="_blank"  在新窗口打开链接 -->
+  <a href="#" target="_blank">腾讯首页</a>
+  <a href="https://www.qq.com" target="_blank">腾讯首页</a>
+</body>
+</html>

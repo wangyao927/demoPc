@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>背景裁剪</title>
+  <style>
+    .text{
+      /* 文字大小 */
+      font-size: 100px;
+      /* 文字加粗 */
+      font-weight: bold;
+      /* 文字居中 */
+      text-align: center;
+      /* 小写字母换成大写 */
+      text-transform: uppercase;
+      /* 引入背景 */
+      background: url(gif.gif) no-repeat;
+      /* 图片填充 */
+      background-size: cover;
+      /* css3以文字背景裁剪 */
+      -webkit-background-clip: text;
+      background-clip: text;
+      /* 文字颜色透明 */  
+      color:transparent;
+
+
+    }
+    .picture{
+      width: 200px;
+      height: 200px;
+      background-size: contain;
+      background: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.3dmgame.com%2Fuploads%2Fimages%2Fnews%2F20190916%2F1568619202_190106.gif&refer=http%3A%2F%2Fimg.3dmgame.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1660963290&t=c1c11c218c0a56173feac34c32f8cae1) no-repeat;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="text">
+    wangyao
+  </div>
+  <div class="picture">
+  </div>
+</body>
+</html>

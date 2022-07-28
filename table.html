@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 去掉表格默认间隙 */
+    table{
+      border-collapse: collapse;
+      margin: 15px;
+    }
+    td{
+      width: 300px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- 完整版table
+  <table>
+    <thead>
+      <tr>
+        <td></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td></td>
+      </tr>
+    </tbody>
+  </table> -->
+  <!-- 单元表格  行tr 列 td/th（加粗居中效果）  border边框  cellpadding单元格内填充 cellspacing单元格外间距（不常用） caption 装标题-->
+  <table border="1" cellpadding='10'  cellspacing='10'>
+    <caption>标题</caption>
+    <tr>
+      <!-- 标题用th加粗 -->
+      <th>姓名</th>
+      <th>年龄</th>
+      <th>喜好</th>
+    </tr>
+    <tr>
+      <td>王同学</td>
+      <td>23</td>
+      <td>吃</td>
+    </tr>
+    <tr>
+      <td>李同学</td>
+      <td>20</td>
+      <td>睡</td>
+    </tr>
+    <!-- 合并列（colspan）  合并后删除同一tr中多余的td！！！ -->
+    <tr>
+      <td>备注</td>
+      <td colspan="2"></td>
+      <!-- <td></td> -->
+    </tr>
+  </table>
+
+    <!-- 合并行（rowspan） 合并后删除其他tr中的td！！！-->
+  <table border="1" cellpadding="10">
+    <tr>
+      <td rowspan="2">上午</td>
+      <td>9:30-10:30</td>
+    </tr>
+    <tr>
+      <!-- <td>上午</td> -->
+      <td>10:30-11:30</td>
+    </tr>
+  </table>
+</body>
+</html>
